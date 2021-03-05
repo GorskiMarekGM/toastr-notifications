@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="toastr.min.css">
+    </head>
+    <body>
+        <button type="button" id="button">Click Alert!</button>
+
+        <script src="jquery36.min.js"></script>
+        <script src="toastr.min.js"></script>
+
+        <script>
+            $('#button').on('click', function(){
+                toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "4000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+                }
+                
+                toastr["success"]("thank you", "ok")
+            })
+        </script>
+    </body>
+</html>
